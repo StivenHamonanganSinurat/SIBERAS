@@ -37,6 +37,39 @@ GEMINI_API_KEY=your_gemini_api_key
 3.  Jalankan `npm run dev` untuk memulai server pengembangan.
 4.  Buka `http://localhost:3000` di browser Anda.
 
+## 🚀 Deployment ke GitHub Pages
+
+Aplikasi ini sudah dikonfigurasi untuk deploy otomatis ke GitHub Pages menggunakan GitHub Actions.
+
+1.  **Push ke GitHub**: Unggah kode ini ke repository GitHub Anda.
+2.  **Konfigurasi Secrets**: Di GitHub, buka **Settings > Secrets and variables > Actions** dan tambahkan:
+    - `VITE_SUPABASE_URL`
+    - `VITE_SUPABASE_ANON_KEY`
+    - `GEMINI_API_KEY`
+3.  **Aktifkan Pages**: Buka **Settings > Pages**, pada bagian **Build and deployment > Source**, pilih **GitHub Actions**.
+4.  Setiap kali Anda melakukan `git push`, aplikasi akan otomatis diperbarui.
+
+## 📱 Konversi ke Android Native (Roadmap)
+
+Untuk mengubah aplikasi web ini menjadi aplikasi Android Native, kita akan menggunakan **Capacitor**:
+
+1.  **Install Capacitor**:
+    ```bash
+    npm install @capacitor/core @capacitor/cli @capacitor/android
+    npx cap init SIBERAS com.digiscript.siberas
+    ```
+2.  **Build Web App**:
+    ```bash
+    npm run build
+    ```
+3.  **Tambah Platform Android**:
+    ```bash
+    npx cap add android
+    npx cap copy
+    npx cap open android
+    ```
+4.  Aplikasi akan terbuka di Android Studio dan siap untuk di-build menjadi `.apk` atau `.aab`.
+
 ## Pembuat
 
 Aplikasi ini dikembangkan oleh **DigiScript Management**.

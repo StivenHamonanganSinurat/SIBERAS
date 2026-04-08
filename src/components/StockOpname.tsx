@@ -95,11 +95,13 @@ export function StockOpnameView() {
           <p className="text-muted-foreground">Audit stok fisik vs stok sistem</p>
         </div>
         <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
-          <DialogTrigger asChild>
-            <Button className="gap-2">
-              <Plus className="w-4 h-4" /> Mulai Opname
-            </Button>
-          </DialogTrigger>
+          <DialogTrigger
+            render={
+              <Button className="gap-2">
+                <Plus className="w-4 h-4" /> Mulai Opname
+              </Button>
+            }
+          />
           <DialogContent className="sm:max-w-[425px]">
             <DialogHeader>
               <DialogTitle>Catat Stock Opname</DialogTitle>
